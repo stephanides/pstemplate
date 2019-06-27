@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
   
-const Video = (props) => {
-  return(
-    <a href={'/' + props.videoTitle} >
+const Video = props => (
+  <Link href={'/' + props.videoTitle} >
+    <a>
       <Item videoImageUrl = {props.videoImageUrl}>
         <h1>{props.videoTitle}</h1>
       </Item>
     </a>
-  )
-};
+  </Link>
+);
   
 const Item = styled.div`
   border: 2px solid pink;
